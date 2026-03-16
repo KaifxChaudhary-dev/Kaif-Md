@@ -1,14 +1,14 @@
 {
-  "name": "wasi-md-v7",
+  "name": "KAIF-MD",
   "version": "7.0.0",
-  "description": "WASI-MD WhatsApp Bot - A powerful modular WhatsApp bot",
+  "description": "KAIF-MD WhatsApp Bot - A powerful modular WhatsApp bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "reset": "node scripts/reset-auth.js",
     "pm2": "pm2 start ecosystem.config.json",
-    "pm2:stop": "pm2 stop wasi-bot",
-    "pm2:logs": "pm2 logs wasi-bot"
+    "pm2:stop": "pm2 stop kaif-bot",
+    "pm2:logs": "pm2 logs kaif-bot"
   },
   "keywords": [
     "whatsapp",
@@ -16,11 +16,11 @@
     "baileys",
     "nodejs"
   ],
-  "author": "Waseem (@Itxxwasi)",
+  "author": "Kaif (@KaifxChaudhary-dev)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Itxxwasi/WASI-MD-V7.git"
+    "url": "https://github.com/KaifxChaudhary-dev.git"
   },
   "engines": {
     "node": "20.x"
