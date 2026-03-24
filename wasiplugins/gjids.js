@@ -1,7 +1,8 @@
 module.exports = {
-    name: 'gjid',
-    category: 'Debug',
-    desc: 'List all groups and their JIDs of the user',
+    name: 'gjids',
+    aliases: ['gjid'],
+    category: 'Tools',
+    desc: 'List all groups and their JIDs',
     wasi_handler: async (wasi_sock, wasi_sender) => {
         try {
             // Fetch all participating groups

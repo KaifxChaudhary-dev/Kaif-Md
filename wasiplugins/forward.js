@@ -13,12 +13,15 @@ module.exports = {
             return await wasi_sock.sendMessage(wasi_sender, { text: '❌ Please reply to a message you want to forward.' });
         }
 
-        // 1b. Robust Unwrap (Handle View Once & nested structures)
+        // 1b. Robust Unwrap & Clean (Handle View Once & regex replacement)
         if (quoted.viewOnceMessageV2) {
             quoted = quoted.viewOnceMessageV2.message;
         } else if (quoted.viewOnceMessage) {
             quoted = quoted.viewOnceMessage.message;
         }
+
+        const { processAndCleanMessage } = require('../wasilib/cleaner');
+        quoted = processAndCleanMessage(quoted);
 
         // 2. Parse Targets
         const inputArgs = wasi_args.join(' ');
