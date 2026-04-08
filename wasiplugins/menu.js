@@ -38,7 +38,7 @@ module.exports = {
             menuText += `╰─────────────────\n\n`;
         }
         
-        menuText += `> _Developed by Mr Wasi (ixxwasi)_`;
+        menuText += `> _Developed by Kaif x Chaudhary and Mr Wasi_`;
 
         await wasi_sock.sendMessage(wasi_origin, { 
             text: menuText,
